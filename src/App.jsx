@@ -4,6 +4,8 @@ import Register from "./pages/Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SharedLayout from "../SharedLayout";
 import HomePage from "./pages/HomePage";
+import Profile from "./pages/Profile";
+import Logout from "./pages/Logout";
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<HomePage />} />
             <Route path="/login" element={<Login />} />
-            <Route path="register" element={<Register />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/logout" element={<Logout />} />
           </Route>
         </Routes>
       </BrowserRouter>

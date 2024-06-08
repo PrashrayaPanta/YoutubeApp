@@ -1,7 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
+
+import PrivateNavbar from "./PrivateNavbar";
+import PublicNavbar from "./PublicNavbar";
 
 const Header = () => {
-  return <div className="text-center">Header</div>;
+  const LoginUser = useSelector((state) => state.auth.userData);
+
+  return <>{LoginUser ? <PrivateNavbar /> : <PublicNavbar />}</>;
 };
 
 export default Header;

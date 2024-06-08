@@ -5,11 +5,11 @@ import SideBar from "./src/components/SideBar";
 
 const SharedLayout = () => {
   return (
-    <div>
+    <>
       <Header />
       <SideBar />
       <Outlet />
-    </div>
+    </>
   );
 };
 
